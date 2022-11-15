@@ -78,6 +78,7 @@ namespace RunCat
             SystemEvents.UserPreferenceChanged += new UserPreferenceChangedEventHandler(UserPreferenceChanged);
 
             gpuCounter = new PerformanceCounter("GPU Engine", "Utilization Persentage");
+            string gpuUsage = gpuCounter.NextValue(); // discards first return value
 
             runnerMenu = new ToolStripMenuItem("Runner", null, new ToolStripMenuItem[]
             {
