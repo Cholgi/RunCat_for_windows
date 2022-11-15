@@ -327,6 +327,7 @@ namespace RunCat
         private void Exit(object sender, EventArgs e)
         {
             cpuUsage.Close();
+            gpuCounter.Close();
             animateTimer.Stop();
             cpuTimer.Stop();
             notifyIcon.Visible = false;
